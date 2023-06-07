@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "692886436989",
+    "project_id": "socialpet-98f23",
+    "storage_bucket": "socialpet-98f23.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:692886436989:android:20a27b14464b532a048514",
+        "android_client_info": {
+          "package_name": "com.example.socialforpet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "692886436989-9n06an89rthqjkjrustqvg78poflt4r1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.socialforpet",
+            "certificate_hash": "70ac49261a24972dff9dae017cd2fa33ca2923b6"
+          }
+        },
+        {
+          "client_id": "692886436989-6oj3ja4ot5iu4i2o3obq00dcabf6tst6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDflA4MmP_l5c24PYrNKf6c8hlEsr9bNNc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "692886436989-6oj3ja4ot5iu4i2o3obq00dcabf6tst6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
