@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">SocialForPet</string>
+    <string name="gioi_tinh">giới tính</string>
+    <string name="profile">Hồ sơ của tôi</string>
+    <string name="name">họ và tên</string>
+    <string name="male">Nam</string>
+    <string name="female">Nữ</string>
+    <string name="email">Email</string>
+    <string name="phone_number">phone number</string>
+    <string name="pet_info">Thông tin Pet</string>
+    <string name="pet_profile">Thông tin thú cưng</string>
+    <string name="pet_name">Tên</string>
+    <string name="pet_species">Loài</string>
+    <string name="gender">Giống</string>
+    <string name="pet_weight">Trọng lượng</string>
+    <string name="pet_sex">Giới tính</string>
+    <string name="pet_date_of_birth">Ngày sinh</string>
+    <string name="pet_male">Đực</string>
+    <string name="pet_female">Cái</string>
+    <string name="update">cập nhật</string>
 </resources>
