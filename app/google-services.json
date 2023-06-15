@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "692886436989-7p1o4pqvjqv3msjg0hm7j1hovjr0l8bo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.socialforpet",
+            "certificate_hash": "57bf32ef1d44f1b9ee546dbf0c067791eb45f286"
+          }
+        },
+        {
           "client_id": "692886436989-9n06an89rthqjkjrustqvg78poflt4r1.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -22,7 +30,7 @@
           }
         },
         {
-          "client_id": "692886436989-6oj3ja4ot5iu4i2o3obq00dcabf6tst6.apps.googleusercontent.com",
+          "client_id": "692886436989-0ff0nocbh9ehpolc3p1uptuq5jt0i0cl.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -35,7 +43,7 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "692886436989-6oj3ja4ot5iu4i2o3obq00dcabf6tst6.apps.googleusercontent.com",
+              "client_id": "692886436989-0ff0nocbh9ehpolc3p1uptuq5jt0i0cl.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

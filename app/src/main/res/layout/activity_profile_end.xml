@@ -37,7 +37,7 @@
         android:backgroundTint="#F8F6F6"
         android:src="@drawable/pet"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/bottomAppBar"
+        app:layout_constraintEnd_toEndOf="@+id/bottomAppBar5"
         app:layout_constraintHorizontal_bias="0.045"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -46,7 +46,7 @@
         android:layout_width="407dp"
         android:layout_height="406dp"
         android:layout_gravity="bottom"
-        android:foreground="@drawable/Rectangle"
+        android:foreground="@drawable/rectangle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -94,9 +94,9 @@
         android:backgroundTint="#F8F6F6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.81"
-        app:layout_constraintStart_toEndOf="@+id/textView14"
+        app:layout_constraintStart_toEndOf="@+id/textView16"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/edit" />
+        app:srcCompat="@drawable/pet" />
 
     <TextView
         android:id="@+id/textView16"
