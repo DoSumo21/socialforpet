@@ -199,7 +199,8 @@
         app:layout_constraintBottom_toTopOf="@+id/bottomAppBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:autofillHints="sdt" />
 
     <Button
         android:id="@+id/button3"
@@ -207,5 +208,6 @@
         android:layout_height="wrap_content"
         android:text="@string/update"
         tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="627dp" />
+        tools:layout_editor_absoluteY="627dp"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
