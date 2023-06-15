@@ -46,7 +46,7 @@
         android:layout_width="407dp"
         android:layout_height="406dp"
         android:layout_gravity="bottom"
-        android:foreground="@drawable/Rectangle"
+        android:foreground="@drawable/rectangle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
