@@ -13,6 +13,12 @@
         android:theme="@style/Theme.SocialForPet"
         tools:targetApi="31">
         <activity
+            android:name=".profile"
+            android:exported="false" />
+        <activity
+            android:name=".Thong_tin_pet"
+            android:exported="false" />
+        <activity
             android:name=".Test"
             android:exported="false" />
         <activity

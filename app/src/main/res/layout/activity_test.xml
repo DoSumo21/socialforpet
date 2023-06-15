@@ -1,13 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#EEEEEE"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Test">
+
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/txtText"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Đăng nhập rồi nè"/>
+        android:text="Chào mừng bạn đến với cộng đồng SoPet! "
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp">
+    </TextView>
+
+    <ImageView
+        android:layout_below="@+id/txtText"
+        android:id="@+id/dog"
+        android:src="@drawable/dog"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ImageView>
+    <TextView
+        android:id="@+id/txtText1"
+        android:gravity="center"
+        android:padding="16dp"
+        android:layout_below="@+id/dog"
+        android:text="Bắt đầu lưu giữ khoảnh khắc của pet yêu cùng soPet!"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <Button
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/btnCreate"
+        android:text="Tạo profile"
+        android:layout_below="@+id/txtText1"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content">
+    </Button>
+    <Button
+        android:id="@+id/btnDeSau"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:backgroundTint="#D7CADF"
+        android:layout_marginLeft="50dp"
+        android:layout_toRightOf="@+id/btnCreate"
+        android:text="Để sau"
+        android:layout_below="@+id/txtText1"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content">
+    </Button>
+
+
 </RelativeLayout>
