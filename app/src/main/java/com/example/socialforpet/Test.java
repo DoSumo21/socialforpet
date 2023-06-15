@@ -22,7 +22,7 @@ public class Test extends AppCompatActivity {
         btnCreate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Test.this, Thong_tin_pet.class );
+                Intent intent = new Intent(Test.this, pet_profile.class );
                 startActivity(intent);
             }
         });

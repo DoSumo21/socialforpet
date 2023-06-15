@@ -16,13 +16,6 @@
         android:layout_gravity="center_horizontal"
         android:src="@drawable/z4379150947117_8d298d97ffc5ccc9836b582386b43b7d"/>
 
-    <TextView
-        android:text="Chào mừng đến với cộng đồng Sopet"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        >
-    </TextView>
 
    <LinearLayout
        android:id="@+id/btn_login_gg"
