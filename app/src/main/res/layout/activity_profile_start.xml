@@ -52,7 +52,7 @@
         tools:ignore="BottomAppBar" />
 
     <ImageButton
-        android:id="@+id/imageButton8"
+        android:id="@+id/imgBtn_CaNhan"
         android:layout_width="60dp"
         android:layout_height="54dp"
         android:backgroundTint="#F8F6F6"
@@ -64,7 +64,7 @@
         android:contentDescription="@string/profile" />
 
     <ImageButton
-        android:id="@+id/imageButton7"
+        android:id="@+id/imgBtn_KhamPha"
         android:layout_width="60dp"
         android:layout_height="54dp"
         android:backgroundTint="#F8F6F6"
@@ -74,7 +74,7 @@
         app:layout_constraintStart_toStartOf="@+id/bottomAppBar4" />
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/imgBtn_Pet"
         android:layout_width="60dp"
         android:layout_height="54dp"
         android:layout_marginStart="16dp"

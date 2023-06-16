@@ -16,6 +16,9 @@
             android:name=".profile_end"
             android:exported="false" />
         <activity
+            android:name=".pet_profile"
+            android:exported="false" />
+        <activity
             android:name=".profile_start"
             android:exported="false" />
         <activity

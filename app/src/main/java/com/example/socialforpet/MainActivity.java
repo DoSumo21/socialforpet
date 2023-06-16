@@ -86,7 +86,7 @@ public class MainActivity extends Activity {
                     if (task.isSuccessful()) {
                         // Sign in success, update UI with the signed-in user's information
                         dialog.dismiss();
-                        startActivity(new Intent(MainActivity.this, pet_profile.class));
+                        startActivity(new Intent(MainActivity.this, Test.class));
                         finish();
                     } else {
                         Toast.makeText(MainActivity.this,"Vui lòng đăng nhập lại", Toast.LENGTH_SHORT).show();
