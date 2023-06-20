@@ -29,7 +29,7 @@ public class Test extends AppCompatActivity {
         btnClose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Test.this, MainActivity.class );
+                Intent intent = new Intent(Test.this, homepage.class );
                 startActivity(intent);
             }
         });

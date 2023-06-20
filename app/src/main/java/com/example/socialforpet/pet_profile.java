@@ -59,7 +59,6 @@ public class pet_profile extends AppCompatActivity {
             }
         });
 
-
         avatar.setOnClickListener(v -> {
             Intent gallery = new Intent(Intent.ACTION_PICK);
             gallery.setType("image/*");
