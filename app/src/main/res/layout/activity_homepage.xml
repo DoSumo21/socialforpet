@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".homepage"
+    android:layout_gravity="center_horizontal">
+
+    <ImageButton
+        android:id="@+id/imageButton13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/baseline_keyboard_backspace_24"
+    />
+
+    <TextView
+        android:layout_toRightOf="@+id/imageButton13"
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/profile"
+        android:paddingTop="10dp"
+        android:layout_marginLeft="100dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+       />
+
+    <ImageButton
+        android:layout_toRightOf="@+id/textView16"
+        android:id="@+id/imageButton12"
+        android:layout_marginLeft="100dp"
+        android:paddingTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#F8F6F6"
+        app:srcCompat="@drawable/edit" />
+
+    <ImageView
+        android:id="@+id/ima"
+        android:layout_marginTop="100dp"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageButton13"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/home1" />
+
+    <ImageButton
+        android:id="@+id/btn_share"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_below="@+id/ima"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/button"
+        android:layout_height="wrap_content">
+    </ImageButton>
+
+    <RelativeLayout
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/btn_share"
+        android:id="@+id/bottomAppBar4"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        />
+
+    <ImageButton
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/btn_share"
+        android:id="@+id/imgBtn_CaNhan"
+        android:layout_width="60dp"
+        android:layout_height="54dp"
+        android:backgroundTint="@color/white"
+        app:srcCompat="@drawable/profile"
+        android:contentDescription="@string/profile" />
+
+    <ImageButton
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="40dp"
+        android:layout_toRightOf="@+id/imgBtn_CaNhan"
+        android:layout_below="@+id/btn_share"
+        android:id="@+id/imgBtn_KhamPha"
+        android:layout_width="60dp"
+        android:layout_height="54dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/normal"
+         />
+
+    <ImageButton
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="40dp"
+        android:layout_toRightOf="@+id/imgBtn_KhamPha"
+        android:layout_below="@+id/btn_share"
+        android:id="@+id/imgBtn_Pet"
+        android:layout_width="60dp"
+        android:layout_height="54dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/pet"
+         />
+
+</RelativeLayout>
