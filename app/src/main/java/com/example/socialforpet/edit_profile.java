@@ -119,7 +119,7 @@ public class edit_profile extends AppCompatActivity {
                 NguoiDung = new User();
                 try {
                     NguoiDung = AddUser();
-                    db.collection("users").document(user.getUid()).collection("users").document(NguoiDung.getId() + "").set(NguoiDung)
+                    db.collection("users").document(user.getUid()).collection("users").document("Information").set(NguoiDung)
                             .addOnCompleteListener(task -> {
                                 if (task.isSuccessful()){
                                     Toast.makeText(edit_profile.this, " Đã thêm thành công vào database ", Toast.LENGTH_SHORT).show();
@@ -127,7 +127,7 @@ public class edit_profile extends AppCompatActivity {
                             });
                     if (DaThemHinh) {
                         StorageReference storageReference = FirebaseStorage.getInstance().getReference();
-                        StorageReference image = storageReference.child(user.getUid() + "/users/" + NguoiDung.getId() + ".jpg");
+                        StorageReference image = storageReference.child(user.getUid() + "/users/avatar.jpg");
                         String path = MediaStore.Images.Media.insertImage(getContentResolver(),  avatarBitmap, NguoiDung.getId() + "", "image");
                         Uri uri = Uri.parse(path);
                         image.putFile(uri).addOnCompleteListener(task -> {
@@ -137,6 +137,10 @@ public class edit_profile extends AppCompatActivity {
                             }
                         });
                     }
+                    Intent intent = new Intent(getApplicationContext(),profile_start.class);
+                    startActivity(intent);
+                    finish();
+
                 } catch (ParseException e) {
                     throw new RuntimeException(e);
                 }

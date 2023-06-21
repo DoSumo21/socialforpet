@@ -2,6 +2,7 @@
     <string name="app_name">SocialForPet</string>
     <string name="gioi_tinh">giới tính</string>
     <string name="profile">Hồ sơ của tôi</string>
+    <string name="pet">Pet của tôi</string>
     <string name="name">họ và tên</string>
     <string name="male">Nam</string>
     <string name="female">Nữ</string>
