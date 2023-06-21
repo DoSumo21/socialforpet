@@ -18,4 +18,8 @@
     <string name="pet_male">Đực</string>
     <string name="pet_female">Cái</string>
     <string name="update">Cập nhật</string>
+    <string name="post">Tạo bài đăng</string>
+    <string name="text">Bạn đang nghĩ gì?</string>
+    <string name="picture">ảnh</string>
+    <string name="video">video</string>
 </resources>

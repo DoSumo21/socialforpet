@@ -59,47 +59,44 @@
     </ImageButton>
 
     <RelativeLayout
-        android:layout_marginTop="40dp"
-        android:layout_below="@+id/btn_share"
         android:id="@+id/bottomAppBar4"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_share"
         android:layout_gravity="bottom"
-        />
+        android:layout_marginTop="38dp" />
 
     <ImageButton
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="40dp"
-        android:layout_below="@+id/btn_share"
         android:id="@+id/imgBtn_CaNhan"
         android:layout_width="60dp"
         android:layout_height="54dp"
+        android:layout_below="@+id/btn_share"
+        android:layout_marginLeft="112dp"
+        android:layout_marginTop="45dp"
+        android:layout_toRightOf="@+id/imgBtn_KhamPha"
         android:backgroundTint="@color/white"
-        app:srcCompat="@drawable/profile"
-        android:contentDescription="@string/profile" />
+        android:contentDescription="@string/profile"
+        app:srcCompat="@drawable/profile" />
 
     <ImageButton
-        android:layout_marginLeft="120dp"
-        android:layout_marginTop="40dp"
-        android:layout_toRightOf="@+id/imgBtn_CaNhan"
-        android:layout_below="@+id/btn_share"
         android:id="@+id/imgBtn_KhamPha"
         android:layout_width="60dp"
         android:layout_height="54dp"
+        android:layout_below="@+id/btn_share"
+        android:layout_marginLeft="104dp"
+        android:layout_marginTop="45dp"
+        android:layout_toRightOf="@+id/imgBtn_Pet"
         android:backgroundTint="@color/white"
-        android:src="@drawable/normal"
-         />
+        android:src="@drawable/normal" />
 
     <ImageButton
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="40dp"
-        android:layout_toRightOf="@+id/imgBtn_KhamPha"
-        android:layout_below="@+id/btn_share"
         android:id="@+id/imgBtn_Pet"
         android:layout_width="60dp"
         android:layout_height="54dp"
+        android:layout_below="@+id/btn_share"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="45dp"
         android:backgroundTint="@color/white"
-        android:src="@drawable/pet"
-         />
+        android:src="@drawable/pet" />
 
 </RelativeLayout>
