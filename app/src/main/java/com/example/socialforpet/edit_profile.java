@@ -2,7 +2,6 @@ package com.example.socialforpet;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -16,29 +15,22 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.RadioButton;
 import android.widget.Toast;
-
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
-
 import java.io.File;
 import java.io.IOException;
 import java.text.ParseException;
-
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class edit_profile extends AppCompatActivity {
     EditText hoten, sdt, email, gioitinh;
     CheckBox rdNam, rdNu;
-
     Bitmap avatarBitmap;
-
     Button btnCapNhat;
-
     ImageButton btnPet;
     User NguoiDung;
     private FirebaseFirestore db;
