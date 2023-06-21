@@ -63,7 +63,7 @@ public class pet_profile extends AppCompatActivity {
         btnCaNhan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(pet_profile.this, edit_profile.class );
+                Intent intent = new Intent( getApplicationContext(), edit_profile.class );
                 startActivity(intent);
             }
         });

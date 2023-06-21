@@ -9,14 +9,6 @@ public class User {
         HoTen = hoTen;
     }
 
-    public String getPhoneNumber() {
-        return PhoneNumber;
-    }
-
-    public void setPhoneNumber(String PhoneNumber) {
-        PhoneNumber = PhoneNumber;
-    }
-
     public String getEmail() {
         return Email;
     }
@@ -43,6 +35,15 @@ public class User {
 
     private Long id;
     private String HoTen;
+
+    public String getPhoneNumber() {
+        return PhoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        PhoneNumber = phoneNumber;
+    }
+
     private String PhoneNumber;
     private String Email;
     private boolean GioiTinh;
