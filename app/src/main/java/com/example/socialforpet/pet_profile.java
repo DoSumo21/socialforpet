@@ -59,20 +59,11 @@ public class pet_profile extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
         user = FirebaseAuth.getInstance().getCurrentUser();
         btnCaNhan = findViewById(R.id.imgBtn_CaNhan);
-        btnKhamPha = findViewById(R.id.imgBtn_KhamPha);
-        btnPet = findViewById(R.id.imgBtn_Pet);
         avatar = findViewById(R.id.imageView3);
         btnCaNhan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(pet_profile.this, edit_profile.class );
-                startActivity(intent);
-            }
-        });
-        btnPet.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(pet_profile.this, pet_profile.class );
                 startActivity(intent);
             }
         });
