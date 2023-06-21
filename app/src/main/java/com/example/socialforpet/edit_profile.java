@@ -49,6 +49,7 @@ public class edit_profile extends AppCompatActivity {
         user = FirebaseAuth.getInstance().getCurrentUser();
         avatar = findViewById(R.id.imageView);
         btnPet = findViewById(R.id.btnPet);
+        btnCapNhat = findViewById(R.id.btn_CapNhat);
         btnPet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,6 +57,16 @@ public class edit_profile extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btnCapNhat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(edit_profile.this, profile_end.class );
+                startActivity(intent);
+            }
+        });
+
+
         avatar.setOnClickListener(v -> {
             Intent gallery = new Intent(Intent.ACTION_PICK);
             gallery.setType("image/*");
@@ -146,6 +157,8 @@ public class edit_profile extends AppCompatActivity {
         String addten = hoten.getText().toString();
         String addsdt= sdt.getText().toString();
         String addemail= email.getText().toString();
+
+
 
         Boolean addgioitinh;
         if (rdNam.isEnabled()){
