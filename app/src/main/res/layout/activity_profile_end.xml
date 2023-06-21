@@ -26,8 +26,8 @@
         android:src="@drawable/normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="@+id/bottomAppBar" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/bottomAppBar5" />
 
     <ImageButton
         android:id="@+id/imageButton15"
@@ -53,25 +53,30 @@
         tools:ignore="BottomAppBar" />
 
     <TextView
-        android:id="@+id/textView17"
+        android:id="@+id/txt_Ten"
+        android:gravity="center"
         android:layout_width="225dp"
         android:layout_height="31dp"
         android:layout_marginTop="20dp"
-        android:text="@string/pet_name"
+        android:text="Tên thú cưng"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        app:layout_constraintTop_toBottomOf="@+id/img_avatarPet" />
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_avatarPet"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="96dp"
+        android:background="@color/white"
+        android:elevation="3dp"
+        android:inputType="text"
+        android:scaleType="centerCrop"
+        android:src="@drawable/avatar_human"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/imageButton13"
@@ -103,7 +108,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="@string/profile"
+        android:text="@string/pet"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
