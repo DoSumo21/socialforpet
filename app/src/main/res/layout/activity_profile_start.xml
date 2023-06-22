@@ -32,8 +32,8 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/img_avatar"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
         android:layout_marginTop="96dp"
         android:background="@color/white"
         android:elevation="3dp"
@@ -112,7 +112,7 @@
 
     <TextView
         android:id="@+id/txt_hoten"
-
+        android:layout_marginLeft="150dp"
         android:layout_width="225dp"
         android:layout_height="31dp"
         android:layout_marginTop="20dp"
