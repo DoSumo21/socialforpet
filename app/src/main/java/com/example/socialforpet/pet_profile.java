@@ -127,7 +127,7 @@ public class pet_profile extends AppCompatActivity {
                 thucung = new Pet();
                 try {
                     thucung = AddPet();
-                    db.collection("users").document(user.getUid()).collection("pets").document( "Information").set(thucung)
+                    db.collection("users").document(user.getUid()).collection("pets").document(  thucung.getId() + "").set(thucung)
                             .addOnCompleteListener(task -> {
                                 if (task.isSuccessful()){
                                     Toast.makeText(pet_profile.this, " Đã thêm thành công vào database ", Toast.LENGTH_SHORT).show();
@@ -135,7 +135,7 @@ public class pet_profile extends AppCompatActivity {
                             });
                     if (DaThemHinh) {
                         StorageReference storageReference = FirebaseStorage.getInstance().getReference();
-                        StorageReference image = storageReference.child(user.getUid() + "/pets/avatar1.jpg");
+                        StorageReference image = storageReference.child(user.getUid() + "/pets/" + thucung.getId() + ".jpg");
                         String path = MediaStore.Images.Media.insertImage(getContentResolver(),  avatarBitmap, thucung.getId() + "", "image");
                         Uri uri = Uri.parse(path);
                         image.putFile(uri).addOnCompleteListener(task -> {
@@ -143,15 +143,20 @@ public class pet_profile extends AppCompatActivity {
                             if (fdelete.exists()) {
                                 fdelete.delete();
                             }
+                            Intent intent = new Intent(getApplicationContext(),profile_end.class);
+                            intent.putExtra("petId", thucung.getId());
+                            startActivity(intent);
+                            finish();
                         });
+                    } else {
+                        Intent intent = new Intent(getApplicationContext(),profile_end.class);
+                        intent.putExtra("petId", thucung.getId());
+                        startActivity(intent);
+                        finish();
                     }
-                    Intent intent = new Intent(getApplicationContext(),profile_end.class);
-                    startActivity(intent);
-                    finish();
                 } catch (ParseException e) {
                     throw new RuntimeException(e);
                 }
-                Log.e( "AAA", "onClick: " + thucung.getTen() + thucung.getLoai() + thucung.getGiong() + thucung.getNgaySinh() + thucung.isGioiTinh() + thucung.getTrongLuong());
             }
         });
     }

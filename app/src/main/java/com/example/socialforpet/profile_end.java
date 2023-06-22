@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,39 +23,39 @@ public class profile_end extends AppCompatActivity {
 
     ImageView img_avatar;
     TextView txt_Ten;
-    FirebaseUser pet;
+    FirebaseUser user;
     FirebaseStorage storageRef;
     FirebaseFirestore dataRef;
+
+    long petId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_end);
         img_avatar = findViewById(R.id.img_avatarPet);
         txt_Ten = findViewById(R.id.txt_Ten);
-        pet = FirebaseAuth.getInstance().getCurrentUser();
+        user = FirebaseAuth.getInstance().getCurrentUser();
         storageRef = FirebaseStorage.getInstance();
         dataRef = FirebaseFirestore.getInstance();
 
-        dataRef.collection("users").document(pet.getUid()).collection("pets").document("Information")
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                        if(task.isSuccessful()){
-                            DocumentSnapshot documentSnapshot = task.getResult();
-                            txt_Ten.setText(documentSnapshot.getData().get("ten").toString());
-                            String duongdan = pet.getUid() +"/pets/avatar1.jpg";
-                            storageRef.getReference().child(duongdan)
-                                    .getDownloadUrl()
-                                    .addOnSuccessListener(new OnSuccessListener<Uri>() {
-                                        @Override
-                                        public void onSuccess(Uri uri) {
-                                            Glide.with(profile_end.this)
-                                                    .load(uri.toString())
-                                                    .into(img_avatar);                                        }
-                                    });
-                        }
-                    }
+        petId = getIntent().getLongExtra("petId", 0);
+
+        String duongdan = user.getUid() +"/pets/"+ petId +".jpg";
+        storageRef.getReference().child(duongdan)
+                .getDownloadUrl()
+                .addOnSuccessListener(uri ->
+                        Glide.with(profile_end.this)
+                        .load(uri.toString())
+                        .into(img_avatar));
+        dataRef.collection("users").document(user.getUid())
+                .collection("pets").document(petId + "")
+                .get().addOnCompleteListener(task -> {
+                   if (task.isSuccessful()){
+                       DocumentSnapshot document = task.getResult();
+                       Pet pet = document.toObject(Pet.class);
+                       txt_Ten.setText(pet.getTen());
+                   }
                 });
+
     }
 }

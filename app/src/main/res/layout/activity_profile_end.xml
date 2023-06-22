@@ -6,40 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".profile_end">
 
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/bottomAppBar5"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="BottomAppBar" />
 
-    <ImageButton
-        android:id="@+id/imageButton16"
-        android:layout_width="60dp"
-        android:layout_height="54dp"
-        android:layout_marginEnd="176dp"
-        android:backgroundTint="#F8F6F6"
-        android:src="@drawable/normal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/bottomAppBar5" />
-
-    <ImageButton
-        android:id="@+id/imageButton15"
-        android:layout_width="60dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="16dp"
-        android:backgroundTint="#F8F6F6"
-        android:src="@drawable/pet"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/bottomAppBar5"
-        app:layout_constraintHorizontal_bias="0.045"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar3"
@@ -129,15 +96,42 @@
         app:layout_constraintTop_toBottomOf="@+id/bottomAppBar3"
         app:srcCompat="@drawable/icon" />
 
-    <ImageButton
-        android:id="@+id/imageButton17"
-        android:layout_width="60dp"
-        android:layout_height="54dp"
-        android:backgroundTint="#F8F6F6"
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="409dp"
+        android:layout_height="258dp"
+        android:layout_marginBottom="352dp"
+        app:layout_constraintBottom_toBottomOf="@+id/image_hero"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_hero"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_180"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="center"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/bottomAppBar5"
-        app:layout_constraintHorizontal_bias="0.959"
-        app:layout_constraintStart_toStartOf="@+id/bottomAppBar5"
-        app:srcCompat="@drawable/profile" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="TextView"
+        android:textColor="#FFF"
+        app:layout_constraintBottom_toBottomOf="@+id/image_hero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/image_hero"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
