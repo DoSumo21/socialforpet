@@ -122,16 +122,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_avatar" />
 
-    <ImageButton
-        android:id="@+id/imageButton11"
-        android:layout_width="60dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#F8F6F6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.645"
-        app:layout_constraintStart_toEndOf="@+id/textView14"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/edit" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

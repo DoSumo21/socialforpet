@@ -24,7 +24,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import java.util.ArrayList;
 import java.util.List;
 
-public class profile_end extends AppCompatActivity {
+public class profile_end extends AppCompatActivity implements IOnclick{
 
     ImageView img_avatar;
     TextView txt_Ten;
@@ -41,7 +41,7 @@ public class profile_end extends AppCompatActivity {
         setContentView(R.layout.activity_profile_end);
 
         rcvUser = findViewById(R.id.rcv_user);
-        userAdapter = new UserAdapter(this);
+        userAdapter = new UserAdapter(this,this);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
         rcvUser.setLayoutManager(linearLayoutManager);
@@ -80,22 +80,29 @@ public class profile_end extends AppCompatActivity {
     private List<OJUser> getListUser(){
         List<OJUser> list = new ArrayList<>();
 
-        list.add(new OJUser(R.drawable.pet1, "Pet name 1"));
-        list.add(new OJUser(R.drawable.pet2, "Pet name 2"));
-        list.add(new OJUser(R.drawable.pet3, "Pet name 3"));
-        list.add(new OJUser(R.drawable.pet4, "Pet name 4"));
-        list.add(new OJUser(R.drawable.pet5, "Pet name 5"));
+        list.add(new OJUser(R.drawable.pet1, "Cooper"));
+        list.add(new OJUser(R.drawable.pet2, "Lola"));
+        list.add(new OJUser(R.drawable.pet3, "Stella"));
+        list.add(new OJUser(R.drawable.pet4, "Zoey"));
+        list.add(new OJUser(R.drawable.pet5, "Henry"));
 
-        list.add(new OJUser(R.drawable.pet6, "Pet name 6"));
-        list.add(new OJUser(R.drawable.pet7, "Pet name 7"));
-        list.add(new OJUser(R.drawable.pet8, "Pet name 8"));
+        list.add(new OJUser(R.drawable.pet6, "Ruby"));
+        list.add(new OJUser(R.drawable.pet7, "Tucker"));
+        list.add(new OJUser(R.drawable.pet8, "Winston"));
 
-        list.add(new OJUser(R.drawable.pet9, "Pet name 9"));
-        list.add(new OJUser(R.drawable.pet10, "Pet name 10"));
-        list.add(new OJUser(R.drawable.pet11, "Pet name 11"));
-        list.add(new OJUser(R.drawable.pet12, "Pet name 12"));
+        list.add(new OJUser(R.drawable.pet9, "Willow"));
+        list.add(new OJUser(R.drawable.pet10, "Louie"));
+        list.add(new OJUser(R.drawable.pet11, "Ziggy"));
+        list.add(new OJUser(R.drawable.pet12, "Penny"));
+
+
 
         return list;
     }
 
+    @Override
+    public void onclick(OJUser a) {
+        img_avatar.setImageResource(a.getResourceId());
+        txt_Ten.setText(a.getName());
+    }
 }

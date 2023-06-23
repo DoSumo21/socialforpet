@@ -4,21 +4,39 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.List;
 
+
+
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder>{
+
+    EditText edt_TenPet;
+    Button btn_upload;
+    FirebaseAuth mAuth = FirebaseAuth.getInstance();
+    FirebaseUser user;
+    FirebaseFirestore db;
 
     private Context mContext;
     private List<OJUser> mListUser;
 
-    public UserAdapter(Context mContext) {
+    IOnclick iOnclick;
+    public UserAdapter(Context mContext, IOnclick iOnclick ) {
+
         this.mContext = mContext;
+        this.iOnclick = iOnclick;
     }
 
     public void setData(List<OJUser> list){
@@ -41,6 +59,8 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
         }
         holder.imageUser.setImageResource(ojUser.getResourceId());
         holder.tvName.setText(ojUser.getName());
+        holder.cardView.setOnClickListener(v -> iOnclick.onclick(ojUser));
+
     }
 
     @Override
@@ -56,11 +76,15 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
         private ImageView imageUser;
         private TextView tvName;
 
+        CardView cardView;
+
+
         public UserViewHolder(@NonNull View itemView) {
             super(itemView);
 
             imageUser = itemView.findViewById(R.id.img_user);
             tvName = itemView.findViewById(R.id.txt_name);
+            cardView = itemView.findViewById(R.id.rcv_View);
         }
     }
 }

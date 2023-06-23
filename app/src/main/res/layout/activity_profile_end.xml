@@ -9,7 +9,7 @@
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bot_Appbar"
-        android:layout_width="407dp"
+        android:layout_width="match_parent"
         android:layout_height="406dp"
         android:layout_gravity="bottom"
         android:gravity="center_horizontal"
@@ -24,12 +24,11 @@
         android:layout_width="60dp"
         android:layout_height="54dp"
         android:layout_marginTop="16dp"
-        android:backgroundTint="#F8F6F6"
+        android:backgroundTint="@color/white"
         android:src="@drawable/baseline_keyboard_backspace_24" />
 
     <TextView
-        android:layout_marginLeft="90dp"
-        android:layout_toEndOf="@+id/img_back"
+        android:layout_centerHorizontal="true"
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -51,7 +50,7 @@
         android:src="@drawable/avatar_human"/>
 
     <TextView
-        android:layout_marginLeft="80dp"
+        android:layout_centerHorizontal="true"
         android:layout_below="@+id/img_avatarPet"
         android:id="@+id/txt_Ten"
         android:gravity="center"
